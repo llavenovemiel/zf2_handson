@@ -18,7 +18,7 @@ class AlbumControllerFactory
     public function __invoke(ContainerInterface $container)
     {
         $container = $container->getServiceLocator();
-        $AlbumTable = $container->get(AlbumTable::class); //why?
+        $AlbumTable = $container->get(AlbumTable::class);
 
         return new AlbumController($AlbumTable);
     }

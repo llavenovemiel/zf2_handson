@@ -9,13 +9,14 @@
 namespace Album\Model;
 
 use RuntimeException;
-use Zend\Db\TableGateway\TableGateway;
+use Zend\Db\TableGateway\TableGatewayInterface;
+
 
 class AlbumTable
 {
     private $tableGateway;
 
-    public function _construct(TableGateway $tableGateway)
+    public function __construct(TableGatewayInterface $tableGateway)
     {
         $this->tableGateway = $tableGateway;
     }
